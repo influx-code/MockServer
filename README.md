@@ -6,4 +6,4 @@ MockServer is a simulation data static service to help the front-end to develop 
 
 ## License
 
-Mock.js is available under the terms of the [MIT License](./LICENSE).
+MockServer is available under the terms of the [MIT License](./LICENSE).
