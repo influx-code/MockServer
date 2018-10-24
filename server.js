@@ -7,9 +7,11 @@ const Mock = require("mockjs");
 class MockSever {
     /**
      * 初始化
+     * @param {*} port 启用端口
      */
-    init() {
+    init(port) {
         const self = this;
+        let _port = port || 3000;
         let app = http.createServer((request, response) => {
             let url = request.url;
             let router = self.getRouter();
@@ -26,8 +28,8 @@ class MockSever {
                     });
             }
         });
-        app.listen(3000);
-        console.info("mock server start");
+        app.listen(_port);
+        console.info(`Mock server is running at http://localhost:${_port}/`);
     }
 
     /**
