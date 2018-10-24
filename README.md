@@ -16,15 +16,13 @@ npm run start
 
 ## example
 
-## 配置端口
+### 配置端口
 
-默认端口为3000，可在server.js的init函数设置端口
+默认端口为 3000，可在 server.js 的 init 函数设置端口
 
-## 基本栗子
+### 基本栗子
 
-
-
-1.在data目录下配置数据源
+1.在 data 目录下配置数据源
 
 ![data](/Users/tz/code/MockServer/docs/images/data.png)
 
@@ -36,9 +34,7 @@ npm run start
 
 ![image-20181024172539627](/Users/tz/Library/Application Support/typora-user-images/image-20181024172539627.png)
 
-
-
-## 生成模板数据
+### 生成模板数据
 
 **更多语法请参考**`Mock.js`文档(http://mockjs.com/examples.html#Array)
 
@@ -47,8 +43,6 @@ npm run start
 ![array](/Users/tz/code/MockServer/docs/images/array.png)
 
 ![image-20181024173939355](/Users/tz/Library/Application Support/typora-user-images/image-20181024173939355.png)
-
-
 
 ## License
 
