@@ -1,5 +1,26 @@
 {
-  "dependencies": {
-    "mockjs": "^1.0.1-beta3"
-  }
+    "name": "mockserver",
+    "version": "1.0.0",
+    "description": "mock",
+    "main": "server.js",
+    "dependencies": {
+        "_commander@2.19.0@commander": "^2.19.0",
+        "_mockjs@1.0.1-beta3@mockjs": "^1.0.1-beta3",
+        "commander": "^2.19.0",
+        "mockjs": "^1.0.1-beta3"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/influx-code/MockServer.git"
+    },
+    "author": "devman",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/influx-code/MockServer/issues"
+    },
+    "homepage": "https://github.com/influx-code/MockServer#readme"
 }

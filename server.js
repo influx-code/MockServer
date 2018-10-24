@@ -91,12 +91,8 @@ class MockSever {
      * 动态获取路由配置
      */
     getRouter() {
-        return JSON.parse(
-            fs.readFileSync(
-                path.resolve(__dirname, "./router.conf.json"),
-                "utf-8"
-            )
-        );
+        delete require.cache[require.resolve("./router.conf.js")];
+        return require("./router.conf.js");
     }
 }
 
