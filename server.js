@@ -19,8 +19,7 @@ let server = {
                         self.handler200Code(response, data);
                     })
                     .catch(error => {
-                        console.error(error);
-                        self.handler500Code(response);
+                        self.handler500Code(response, error);
                     });
             }
         });
@@ -57,9 +56,9 @@ let server = {
     /**
      * 500
      */
-    handler500Code(response) {
+    handler500Code(response, error) {
         response.writeHead(500, { "Content-Type": "text/plain" });
-        response.end("Internal Server Error");
+        response.end(`Internal Server Error\n${error}`);
     },
     /**
      * 200
