@@ -50,14 +50,18 @@ let server = {
      * 404
      */
     handler404Code(response) {
-        response.writeHead(404, { "Content-Type": "text/plain" });
+        response.writeHead(404, {
+            "Content-Type": "application/json; charset=utf-8"
+        });
         response.end("Not Found");
     },
     /**
      * 500
      */
     handler500Code(response, error) {
-        response.writeHead(500, { "Content-Type": "text/plain" });
+        response.writeHead(500, {
+            "Content-Type": "application/json; charset=utf-8"
+        });
         response.end(`Internal Server Error\n${error}`);
     },
     /**
@@ -65,7 +69,9 @@ let server = {
      * @param {*} data
      */
     handler200Code(response, data) {
-        response.writeHead(200, { "Content-Type": "text/plain" });
+        response.writeHead(200, {
+            "Content-Type": "application/json; charset=utf-8"
+        });
         response.end(JSON.stringify(data));
     },
     /**
