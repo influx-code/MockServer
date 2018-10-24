@@ -4,7 +4,10 @@ const fs = require("fs");
 
 const Mock = require("mockjs");
 
-let server = {
+class MockSever {
+    /**
+     * 初始化
+     */
     init() {
         const self = this;
         let app = http.createServer((request, response) => {
@@ -23,13 +26,13 @@ let server = {
                     });
             }
         });
-
         app.listen(3000);
         console.info("mock server start");
-    },
+    }
+
     /**
      * 获取接口数据
-     * @param {*} url 接口url
+     * @param {String} url 接口url
      */
     getAPIData(url) {
         const self = this;
@@ -45,37 +48,45 @@ let server = {
                 reject(error);
             }
         });
-    },
+    }
+
     /**
      * 404
+     * @param {Object} response
      */
     handler404Code(response) {
         response.writeHead(404, {
             "Content-Type": "application/json; charset=utf-8"
         });
         response.end("Not Found");
-    },
+    }
+
     /**
-     * 500
+     *
+     * @param {Object} response
+     * @param {String} error 错误信息
      */
     handler500Code(response, error) {
         response.writeHead(500, {
             "Content-Type": "application/json; charset=utf-8"
         });
         response.end(`Internal Server Error\n${error}`);
-    },
+    }
+
     /**
      * 200
-     * @param {*} data
+     * @param {Object} response
+     * @param {Object} data 返回数据
      */
     handler200Code(response, data) {
         response.writeHead(200, {
             "Content-Type": "application/json; charset=utf-8"
         });
         response.end(JSON.stringify(data));
-    },
+    }
+
     /**
-     * 获取路由对象
+     * 动态获取路由配置
      */
     getRouter() {
         return JSON.parse(
@@ -85,6 +96,6 @@ let server = {
             )
         );
     }
-};
+}
 
-server.init();
+new MockSever().init();
