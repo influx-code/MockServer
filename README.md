@@ -24,15 +24,15 @@ npm run start
 
 1.在 data 目录下配置数据源
 
-![data](/Users/tz/code/MockServer/docs/images/data.png)
+![data](./docs/images/data.png)
 
 2.配置接口路由
 
-![router](/Users/tz/code/MockServer/docs/images/router.png)
+![router](./docs/images/router.png)
 
 3.在启动服务的情况下访问接口
 
-![image-20181024172539627](/Users/tz/Library/Application Support/typora-user-images/image-20181024172539627.png)
+![image-20181024172539627](./docs/images/expamle1.png)
 
 ### 生成模板数据
 
@@ -40,9 +40,9 @@ npm run start
 
 设置模板，配置路由。
 
-![array](/Users/tz/code/MockServer/docs/images/array.png)
+![array](./docs/images/array.png)
 
-![image-20181024173939355](/Users/tz/Library/Application Support/typora-user-images/image-20181024173939355.png)
+![image-20181024173939355](/Users/tz/Downloads/expamle2.png)
 
 ## License
 
