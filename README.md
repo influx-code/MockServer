@@ -42,7 +42,7 @@ npm run start
 
 ![array](./docs/images/array.png)
 
-![image-20181024173939355](/Users/tz/Downloads/expamle2.png)
+![image-20181024173939355](./docs/images/expamle2.png)
 
 ## License
 
